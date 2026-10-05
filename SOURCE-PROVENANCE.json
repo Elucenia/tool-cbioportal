@@ -1,0 +1,175 @@
+{
+  "schema": "elucenia-public-research-provenance-v1",
+  "id": "cbioportal",
+  "implementationVersion": "ELUCENIA-research-api-2026-10-05-v3",
+  "sourceSnapshot": {
+    "websiteFreezeSha256": "b7ff37bd2e4c18b959c3431d9ff57d8ec654fbafacb0443eaea8be0c4a68b435",
+    "methodTransportSha256": "b862226c9d3b9956848ef29eb03177e6c4b64e8c2157f1ca360611c4ba1de036",
+    "providerLockSha256": "08ecf09dfdc0577008a720df82735ca26fc1bec2e1e8f7a49cb2817d2a86a9f1"
+  },
+  "primarySources": [
+    "https://docs.cbioportal.org/web-api-and-clients/",
+    "https://docs.cbioportal.org/user-guide/faq/",
+    "https://www.cbioportal.org/api/v3/api-docs",
+    "https://gdc.cancer.gov/about-data/publications/pancanatlas"
+  ],
+  "fixtureScope": "Captured official API responses for fixed public/synthetic research inputs; no actual patient submission, provider binary or private portal source.",
+  "fixtureHashes": [
+    {
+      "url": "https://www.cbioportal.org/api/info",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "6cdb9c921eea7458c65af9630311319ce1abc8746e44dbc79d2f0915dc7d313d",
+      "bytes": 734,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:43:01.212Z",
+      "file": "response-01.txt",
+      "originalReceipt": {
+        "folder": "live-services-r1",
+        "sha256": "49177aa88e927f9e029ee4c1a3e5507d53b78bd74a63f4e67d2c3346e00c55eb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/studies/brca_tcga_pan_can_atlas_2018?projection=DETAILED",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "cd0fd02fe96f5f0173d01d47bce77a83805fc0b20b8b8abb8b8337e7d1d53f3a",
+      "bytes": 1912,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:43:01.356Z",
+      "file": "response-02.txt",
+      "originalReceipt": {
+        "folder": "live-services-r1",
+        "sha256": "49177aa88e927f9e029ee4c1a3e5507d53b78bd74a63f4e67d2c3346e00c55eb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/genes/TP53",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "31434a004cc24f99ecd2bd3dd6ed82f2ab5c20016b2e6bec7d45ea3b0482efac",
+      "bytes": 69,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:43:01.496Z",
+      "file": "response-03.txt",
+      "originalReceipt": {
+        "folder": "live-services-r1",
+        "sha256": "49177aa88e927f9e029ee4c1a3e5507d53b78bd74a63f4e67d2c3346e00c55eb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/molecular-profiles/brca_tcga_pan_can_atlas_2018_mutations/mutations/fetch?projection=DETAILED&pageSize=25&pageNumber=0&sortBy=proteinChange&direction=ASC",
+      "method": "POST",
+      "input": {
+        "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
+        "entrezGeneIds": [
+          7157
+        ]
+      },
+      "status": 200,
+      "sha256": "c445ce04145b5459dfba3da884cf2d93a7b7b9c138fcf455248092dcb5dcae59",
+      "bytes": 21343,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:43:01.643Z",
+      "file": "response-04.txt",
+      "originalReceipt": {
+        "folder": "live-services-r1",
+        "sha256": "49177aa88e927f9e029ee4c1a3e5507d53b78bd74a63f4e67d2c3346e00c55eb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/info",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "6cdb9c921eea7458c65af9630311319ce1abc8746e44dbc79d2f0915dc7d313d",
+      "bytes": 734,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:45:23.919Z",
+      "file": "response-05.txt",
+      "originalReceipt": {
+        "folder": "live-supplement-r1",
+        "sha256": "8cc35d7be4ddcbac7876b10b69c507a9ae1c57569c4e4fef737ae489601436cb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/studies/brca_tcga_pan_can_atlas_2018?projection=DETAILED",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "cd0fd02fe96f5f0173d01d47bce77a83805fc0b20b8b8abb8b8337e7d1d53f3a",
+      "bytes": 1912,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:45:24.066Z",
+      "file": "response-06.txt",
+      "originalReceipt": {
+        "folder": "live-supplement-r1",
+        "sha256": "8cc35d7be4ddcbac7876b10b69c507a9ae1c57569c4e4fef737ae489601436cb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/genes/TP53",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "31434a004cc24f99ecd2bd3dd6ed82f2ab5c20016b2e6bec7d45ea3b0482efac",
+      "bytes": 69,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:45:24.222Z",
+      "file": "response-07.txt",
+      "originalReceipt": {
+        "folder": "live-supplement-r1",
+        "sha256": "8cc35d7be4ddcbac7876b10b69c507a9ae1c57569c4e4fef737ae489601436cb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/genes/BRCA1",
+      "method": "GET",
+      "input": null,
+      "status": 200,
+      "sha256": "3677aee05c74cd18632f0e06d28ad9ffe52260255606404f438e098f57237216",
+      "bytes": 69,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:45:24.363Z",
+      "file": "response-08.txt",
+      "originalReceipt": {
+        "folder": "live-supplement-r1",
+        "sha256": "8cc35d7be4ddcbac7876b10b69c507a9ae1c57569c4e4fef737ae489601436cb"
+      }
+    },
+    {
+      "url": "https://www.cbioportal.org/api/molecular-profiles/brca_tcga_pan_can_atlas_2018_mutations/mutations/fetch?projection=DETAILED&pageSize=25&pageNumber=1&sortBy=proteinChange&direction=ASC",
+      "method": "POST",
+      "input": {
+        "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
+        "entrezGeneIds": [
+          7157,
+          672
+        ]
+      },
+      "status": 200,
+      "sha256": "44b056d6f84c9e53a713168b8d48924593fe8591fbea35beecb478ba3110d7e4",
+      "bytes": 21369,
+      "contentType": "application/json",
+      "retrievedAt": "2026-10-05T13:45:24.604Z",
+      "file": "response-09.txt",
+      "originalReceipt": {
+        "folder": "live-supplement-r1",
+        "sha256": "8cc35d7be4ddcbac7876b10b69c507a9ae1c57569c4e4fef737ae489601436cb"
+      }
+    }
+  ],
+  "rights": "MIT authored software only; provider data/method rights and attributions remain separate in RIGHTS-SCOPE.md and NOTICE.md",
+  "approval": {
+    "clinical": "not-performed",
+    "professionalLanguage": "not-performed"
+  },
+  "currentProviderHttpEvidence": {
+    "generalReceiptHash": "f2f763fc7ba9fbec8affbfda02a3b8e455e5f88f8c57e3dc0c234263c45dbe06",
+    "iedbCorrectedOrderReceiptHash": "257b338cc8cf5dc57974d0287e48adebfeb275229bf1807a56e657ecb79b9c64",
+    "scope": "Historical v2 loopback HTTP to official APIs only. The current v3 transport has offline tests; fresh compiled R8 provider gates remain required."
+  }
+}

@@ -1,0 +1,1 @@
+{"entrezGeneId":672,"hugoGeneSymbol":"BRCA1","type":"protein-coding"}
