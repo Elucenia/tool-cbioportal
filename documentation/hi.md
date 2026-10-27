@@ -67,7 +67,7 @@ ELUCENIA में इंटरफ़ेस और अनुरोध तथा 
 
 ## संस्करण
 
-`cBioPortal v7.1.2 · brca_tcga_pan_can_atlas_2018 · hg19`
+`cBioPortal v7.x · brca_tcga_pan_can_atlas_2018 · hg19 · 2026-06-05`
 
 ## स्रोत
 

@@ -5,8 +5,9 @@
   "implementationVersion": "ELUCENIA-research-api-2026-10-05-v3",
   "policy": {
     "url": "https://www.cbioportal.org/api/",
-    "version": "v7.1.2",
+    "versionPattern": "^v7\\.\\d+\\.\\d+$",
     "studyId": "brca_tcga_pan_can_atlas_2018",
+    "studyImportDate": "2026-06-05 15:34:03",
     "profileId": "brca_tcga_pan_can_atlas_2018_mutations",
     "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
     "pageSize": 25,
@@ -174,7 +175,8 @@
         "type": "object",
         "properties": {
           "portal": {
-            "const": "v7.1.2"
+            "type": "string",
+            "pattern": "^v7\\.\\d+\\.\\d+$"
           },
           "database": {
             "type": "string"
@@ -183,7 +185,7 @@
             "type": "string"
           },
           "studyImportDate": {
-            "type": "string"
+            "const": "2026-06-05 15:34:03"
           },
           "referenceGenome": {
             "const": "hg19"
@@ -350,62 +352,62 @@
     {
       "locale": "pt-BR",
       "path": "documentation/pt-BR.md",
-      "sha256": "4863e221801d3632893c261e17ac5fab20370efb6ffbeaf01c1a77290336541b",
-      "bytes": 3042
+      "sha256": "d201f729c10c33a97154a35165f8327d1e542f81b3e28381737bc644a2b179c5",
+      "bytes": 3054
     },
     {
       "locale": "en",
       "path": "documentation/en.md",
-      "sha256": "c45fe694ff5dd8bc366aa5874a24ca5a36ebc60695e70c5ceb6371a1c4d14398",
-      "bytes": 2849
+      "sha256": "eb7f2ef2ad542de6e140208729dd94160aa309d052f5e1895cc86006742a82be",
+      "bytes": 2861
     },
     {
       "locale": "es",
       "path": "documentation/es.md",
-      "sha256": "68baa5d31bd5b9922462cf50087576aaa3e7b05806cb016f3eb1d1c7c9df82c3",
-      "bytes": 3121
+      "sha256": "39bc5e8f1c16a56ea60b6430145198851adefed976d95f1a48e607d0d14672c9",
+      "bytes": 3133
     },
     {
       "locale": "fr",
       "path": "documentation/fr.md",
-      "sha256": "a1ea9ac8b25bb136630044b654159889511a44c8f9530967d7532e7aa564d41b",
-      "bytes": 3230
+      "sha256": "2963a2ae62ab6d3d9ced36e2c27c4acba91eaeab31d1feb590dbf17a11e08d7f",
+      "bytes": 3242
     },
     {
       "locale": "de",
       "path": "documentation/de.md",
-      "sha256": "7e7bc08095a15210bcbbbf28f5edc6338941eb98d21d5e9cd6c92920293e2cd6",
-      "bytes": 3149
+      "sha256": "57ba6b1a0002a445d103256085c0eb3928bb849ebff81d87c654bef71c8b66ad",
+      "bytes": 3161
     },
     {
       "locale": "it",
       "path": "documentation/it.md",
-      "sha256": "b55e745ec58d41c73d5751daecb0c648b88277a7b1a0a52839135d9fffac3f55",
-      "bytes": 3085
+      "sha256": "85374b4439cfffd60e644dee6471a711c9da5c1827a47a35993e23e0c75f432c",
+      "bytes": 3097
     },
     {
       "locale": "ar",
       "path": "documentation/ar.md",
-      "sha256": "ba9a9baa30398413d9045d5fa163f4796aa0744c1a38bd1fc2bb9d3cb9fb463a",
-      "bytes": 3807
+      "sha256": "6f59aa966a7456d2c2dd12e5c15c21a8c29e9346eeca8957d8e25e252d3270ae",
+      "bytes": 3819
     },
     {
       "locale": "zh",
       "path": "documentation/zh.md",
-      "sha256": "8a1d64f21002886f39a889a6d1f245170073ddcbb379a7f66af467a927c7a895",
-      "bytes": 2623
+      "sha256": "e1ddfd060b612272fc33ed53d2f3cb0ce989dfdc76fe27b9bd77c617ab3baf91",
+      "bytes": 2635
     },
     {
       "locale": "ja",
       "path": "documentation/ja.md",
-      "sha256": "80030daa56c87e1f41b51640cad4036d95ce5087b6835bde94e6c64935907768",
-      "bytes": 3313
+      "sha256": "d3613b569cdde05eaac58f106400e54c4a7738b7efe62279e0d8188a0aec0138",
+      "bytes": 3325
     },
     {
       "locale": "hi",
       "path": "documentation/hi.md",
-      "sha256": "36762527ff7a78c9e561b74c0e16a7f48aad65cdc534515274392b9aa4721daa",
-      "bytes": 5551
+      "sha256": "3704c2f558d698b130ebefff3afb8f139c7caadc93a12d0a132b3719c083de24",
+      "bytes": 5563
     }
   ],
   "scopeByLocale": {
@@ -498,7 +500,7 @@
   },
   "sourceSnapshot": {
     "websiteFreezeSha256": "b7ff37bd2e4c18b959c3431d9ff57d8ec654fbafacb0443eaea8be0c4a68b435",
-    "methodTransportSha256": "b862226c9d3b9956848ef29eb03177e6c4b64e8c2157f1ca360611c4ba1de036",
-    "providerLockSha256": "08ecf09dfdc0577008a720df82735ca26fc1bec2e1e8f7a49cb2817d2a86a9f1"
+    "methodTransportSha256": "7579ddedf4c524c0dbc105f1cfb7b47ea5512b1653082c99ab4d139bb2f76ba1",
+    "providerLockSha256": "5c06f5e524e2f5552a0c912eed497b912ab220b91b1a3b984e1eb8a3bc6836a0"
   }
 }

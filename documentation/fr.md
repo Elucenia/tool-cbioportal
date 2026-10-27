@@ -67,7 +67,7 @@ L’export conserve les sources, l’attribution, les versions et les limites. L
 
 ## Version
 
-`cBioPortal v7.1.2 · brca_tcga_pan_can_atlas_2018 · hg19`
+`cBioPortal v7.x · brca_tcga_pan_can_atlas_2018 · hg19 · 2026-06-05`
 
 ## Sources
 

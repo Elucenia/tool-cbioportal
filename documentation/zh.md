@@ -67,7 +67,7 @@ ELUCENIA已实现界面及请求和响应契约。分析依赖相应服务的可
 
 ## 版本
 
-`cBioPortal v7.1.2 · brca_tcga_pan_can_atlas_2018 · hg19`
+`cBioPortal v7.x · brca_tcga_pan_can_atlas_2018 · hg19 · 2026-06-05`
 
 ## 来源
 

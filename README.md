@@ -7,8 +7,9 @@ TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. P
 `ELUCENIA-research-api-2026-10-05-v3`
 {
   "url": "https://www.cbioportal.org/api/",
-  "version": "v7.1.2",
+  "versionPattern": "^v7\\.\\d+\\.\\d+$",
   "studyId": "brca_tcga_pan_can_atlas_2018",
+  "studyImportDate": "2026-06-05 15:34:03",
   "profileId": "brca_tcga_pan_can_atlas_2018_mutations",
   "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
   "pageSize": 25,
