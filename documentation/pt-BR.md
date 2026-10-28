@@ -1,6 +1,6 @@
 # cBioPortal: mutações em coorte pública
 
-Coorte TCGA PanCancer de câncer de mama, genoma hg19. Até 5 genes e 25 registros por página. Contagens da página não são prevalência da coorte. Não inclui interpretação terapêutica.
+Coorte TCGA PanCancer de câncer de mama, genoma hg19. Até 5 genes e 25 registros por página. Contagens da página não são prevalência da coorte. Não inclui interpretação terapêutica. A contagem por alteração proteica na coorte inteira é opcional, a pedido.
 
 ## Escopo
 
@@ -33,6 +33,10 @@ Interface e contratos implementados na ELUCENIA. A análise depende da disponibi
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

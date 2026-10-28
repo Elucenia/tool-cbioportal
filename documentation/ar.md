@@ -1,6 +1,6 @@
 # cBioPortal: طفرات مجموعة بحثية عامة
 
-مجموعة TCGA PanCancer العامة لسرطان الثدي، التجميع hg19. حتى 5 جينات و25 سجلًا في الصفحة. أعداد الصفحة ليست انتشارًا في المجموعة. لا يتضمن تفسيرًا علاجيًا.
+مجموعة TCGA PanCancer العامة لسرطان الثدي، التجميع hg19. حتى 5 جينات و25 سجلًا في الصفحة. أعداد الصفحة ليست انتشارًا في المجموعة. لا يتضمن تفسيرًا علاجيًا. يتوفر عند الطلب تعداد لكل تغير بروتيني على المجموعة بأكملها.
 
 ## النطاق
 
@@ -33,6 +33,10 @@
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

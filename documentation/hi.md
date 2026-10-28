@@ -1,6 +1,6 @@
 # cBioPortal: सार्वजनिक समूह की उत्परिवर्तन जानकारी
 
-TCGA PanCancer का सार्वजनिक स्तन-कैंसर समूह, hg19। अधिकतम 5 जीन और प्रति पृष्ठ 25 रिकॉर्ड। पृष्ठ की गिनती समूह में प्रसार नहीं है। उपचार संबंधी व्याख्या शामिल नहीं है।
+TCGA PanCancer का सार्वजनिक स्तन-कैंसर समूह, hg19। अधिकतम 5 जीन और प्रति पृष्ठ 25 रिकॉर्ड। पृष्ठ की गिनती समूह में प्रसार नहीं है। उपचार संबंधी व्याख्या शामिल नहीं है। अनुरोध पर पूरे समूह में प्रत्येक प्रोटीन परिवर्तन की गिनती उपलब्ध है।
 
 ## दायरा
 
@@ -33,6 +33,10 @@ ELUCENIA में इंटरफ़ेस और अनुरोध तथा 
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

@@ -1,6 +1,6 @@
 # cBioPortal: mutaciones en una cohorte pública
 
-Cohorte TCGA PanCancer de cáncer de mama, hg19. Hasta 5 genes y 25 registros por página. Los recuentos de página no son prevalencia de la cohorte. No incluye interpretación terapéutica.
+Cohorte TCGA PanCancer de cáncer de mama, hg19. Hasta 5 genes y 25 registros por página. Los recuentos de página no son prevalencia de la cohorte. No incluye interpretación terapéutica. El recuento por cambio proteico en toda la cohorte es opcional, a petición.
 
 ## Alcance
 
@@ -33,6 +33,10 @@ Interfaz y contratos implementados en ELUCENIA. El análisis depende de la dispo
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

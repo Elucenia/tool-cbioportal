@@ -1,6 +1,6 @@
 # cBioPortal：公开队列突变
 
-TCGA PanCancer 乳腺癌公开队列，hg19。最多 5 个基因，每页 25 条记录。页面计数不是队列患病率。不提供治疗解释。
+TCGA PanCancer 乳腺癌公开队列，hg19。最多 5 个基因，每页 25 条记录。页面计数不是队列患病率。不提供治疗解释。 可按请求返回整个队列中每种蛋白质变化的计数。
 
 ## 适用范围
 
@@ -33,6 +33,10 @@ ELUCENIA已实现界面及请求和响应契约。分析依赖相应服务的可
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

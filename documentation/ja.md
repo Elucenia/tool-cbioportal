@@ -1,6 +1,6 @@
 # cBioPortal：公開コホートの変異
 
-TCGA PanCancer の乳がん公開コホート、hg19。最大5遺伝子、1ページ25件。ページ内の件数はコホート有病率ではありません。治療上の解釈は含みません。
+TCGA PanCancer の乳がん公開コホート、hg19。最大5遺伝子、1ページ25件。ページ内の件数はコホート有病率ではありません。治療上の解釈は含みません。 コホート全体でのタンパク質の変化ごとの件数は、要求に応じて返されます。
 
 ## 適用範囲
 
@@ -33,6 +33,10 @@ ELUCENIA内に画面とリクエスト・レスポンスの契約を実装して
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

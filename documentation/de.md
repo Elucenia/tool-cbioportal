@@ -1,6 +1,6 @@
 # cBioPortal: Mutationen einer öffentlichen Kohorte
 
-TCGA-PanCancer-Brustkrebskohorte, hg19. Bis zu 5 Gene und 25 Zeilen pro Seite. Seitenzahlen sind keine Kohortenprävalenz. Keine therapeutische Interpretation.
+TCGA-PanCancer-Brustkrebskohorte, hg19. Bis zu 5 Gene und 25 Zeilen pro Seite. Seitenzahlen sind keine Kohortenprävalenz. Keine therapeutische Interpretation. Die Zählung je Proteinveränderung über die gesamte Kohorte ist auf Anfrage verfügbar.
 
 ## Umfang
 
@@ -33,6 +33,10 @@ Oberfläche und Schnittstellenverträge sind in ELUCENIA implementiert. Die Anal
       "type": "integer",
       "minimum": 1,
       "maximum": 100
+    },
+    "includeHotspots": {
+      "type": "boolean",
+      "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
     },
     "publicResearchData": {
       "const": true,

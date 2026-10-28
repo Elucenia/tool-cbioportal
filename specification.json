@@ -12,7 +12,9 @@
     "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
     "pageSize": 25,
     "maxGenes": 5,
-    "maxPage": 100
+    "maxPage": 100,
+    "hotspotMaxRows": 10000,
+    "hotspotMinSamples": 2
   },
   "transportLimits": {
     "requestMs": 20000,
@@ -39,6 +41,10 @@
         "type": "integer",
         "minimum": 1,
         "maximum": 100
+      },
+      "includeHotspots": {
+        "type": "boolean",
+        "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
       },
       "publicResearchData": {
         "const": true,
@@ -80,6 +86,10 @@
             "type": "integer",
             "minimum": 1,
             "maximum": 100
+          },
+          "includeHotspots": {
+            "type": "boolean",
+            "description": "Opt in to cohort-wide sample counts per protein change; costs one extra bounded request."
           },
           "publicResearchData": {
             "const": true,
@@ -324,6 +334,62 @@
           "redistributionReview"
         ],
         "additionalProperties": false
+      },
+      "hotspots": {
+        "type": "object",
+        "properties": {
+          "recurrent": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "gene": {
+                  "type": "string"
+                },
+                "proteinChange": {
+                  "type": "string"
+                },
+                "samples": {
+                  "type": "integer",
+                  "minimum": 2
+                }
+              },
+              "required": [
+                "gene",
+                "proteinChange",
+                "samples"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "minimumSamples": {
+            "const": 2
+          },
+          "distinctProteinChanges": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nonRecurrentProteinChanges": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cohortSequencedSamples": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "scope": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recurrent",
+          "minimumSamples",
+          "distinctProteinChanges",
+          "nonRecurrentProteinChanges",
+          "cohortSequencedSamples",
+          "scope"
+        ],
+        "additionalProperties": false
       }
     },
     "required": [
@@ -352,75 +418,75 @@
     {
       "locale": "pt-BR",
       "path": "documentation/pt-BR.md",
-      "sha256": "d201f729c10c33a97154a35165f8327d1e542f81b3e28381737bc644a2b179c5",
-      "bytes": 3054
+      "sha256": "f94d14526ba6e7fbccf7fdc7ba18390badcaa23efa0993214278f11e15374809",
+      "bytes": 3300
     },
     {
       "locale": "en",
       "path": "documentation/en.md",
-      "sha256": "eb7f2ef2ad542de6e140208729dd94160aa309d052f5e1895cc86006742a82be",
-      "bytes": 2861
+      "sha256": "3c86319641052debad7764a076514c089f9a044c19ab876405fe6565f2ccbeb5",
+      "bytes": 3106
     },
     {
       "locale": "es",
       "path": "documentation/es.md",
-      "sha256": "39bc5e8f1c16a56ea60b6430145198851adefed976d95f1a48e607d0d14672c9",
-      "bytes": 3133
+      "sha256": "62a541b8842a8aa7412a65c30dbb67e9e3530f87085f8a7a93684d4f06b68415",
+      "bytes": 3379
     },
     {
       "locale": "fr",
       "path": "documentation/fr.md",
-      "sha256": "2963a2ae62ab6d3d9ced36e2c27c4acba91eaeab31d1feb590dbf17a11e08d7f",
-      "bytes": 3242
+      "sha256": "fcd8d6d5daca6da30d8a7ebc2fc161572599f087244fb6773d8829d570adfba3",
+      "bytes": 3510
     },
     {
       "locale": "de",
       "path": "documentation/de.md",
-      "sha256": "57ba6b1a0002a445d103256085c0eb3928bb849ebff81d87c654bef71c8b66ad",
-      "bytes": 3161
+      "sha256": "f5b07bdeb6c3b791931d125495393ac71345b474d7cfe0bb44e54fe198ff11eb",
+      "bytes": 3420
     },
     {
       "locale": "it",
       "path": "documentation/it.md",
-      "sha256": "85374b4439cfffd60e644dee6471a711c9da5c1827a47a35993e23e0c75f432c",
-      "bytes": 3097
+      "sha256": "a3aef0c09cde857d0ac97994af578c10a23add1a819c4db856304fa8b50f3eda",
+      "bytes": 3353
     },
     {
       "locale": "ar",
       "path": "documentation/ar.md",
-      "sha256": "6f59aa966a7456d2c2dd12e5c15c21a8c29e9346eeca8957d8e25e252d3270ae",
-      "bytes": 3819
+      "sha256": "ab4a5207dab5be0b2edfbb1fc4d9772f4fcab02187b51ad58128ccba3f9c8f6c",
+      "bytes": 4099
     },
     {
       "locale": "zh",
       "path": "documentation/zh.md",
-      "sha256": "e1ddfd060b612272fc33ed53d2f3cb0ce989dfdc76fe27b9bd77c617ab3baf91",
-      "bytes": 2635
+      "sha256": "3f76a1042633b18a741d1bf54901e36efc0c3a2c832a2f59c6bc46cfc43fe7d7",
+      "bytes": 2871
     },
     {
       "locale": "ja",
       "path": "documentation/ja.md",
-      "sha256": "d3613b569cdde05eaac58f106400e54c4a7738b7efe62279e0d8188a0aec0138",
-      "bytes": 3325
+      "sha256": "0637af635eda744674746c434f2e4bd48f308c72409ec00ebf79fce7370fb74a",
+      "bytes": 3600
     },
     {
       "locale": "hi",
       "path": "documentation/hi.md",
-      "sha256": "3704c2f558d698b130ebefff3afb8f139c7caadc93a12d0a132b3719c083de24",
-      "bytes": 5563
+      "sha256": "e948a97617ebc5393bf6bc4ce0780ad6341d095edd71f26ff3b18c472dd5360b",
+      "bytes": 5918
     }
   ],
   "scopeByLocale": {
-    "pt-BR": "Coorte TCGA PanCancer de câncer de mama, genoma hg19. Até 5 genes e 25 registros por página. Contagens da página não são prevalência da coorte. Não inclui interpretação terapêutica.",
-    "en": "TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. Page counts are not cohort prevalence. No therapeutic interpretation is included.",
-    "es": "Cohorte TCGA PanCancer de cáncer de mama, hg19. Hasta 5 genes y 25 registros por página. Los recuentos de página no son prevalencia de la cohorte. No incluye interpretación terapéutica.",
-    "fr": "Cohorte TCGA PanCancer du cancer du sein, hg19. Jusqu’à 5 gènes et 25 lignes par page. Les nombres par page ne sont pas une prévalence de cohorte. Aucune interprétation thérapeutique.",
-    "de": "TCGA-PanCancer-Brustkrebskohorte, hg19. Bis zu 5 Gene und 25 Zeilen pro Seite. Seitenzahlen sind keine Kohortenprävalenz. Keine therapeutische Interpretation.",
-    "it": "Coorte TCGA PanCancer del tumore mammario, hg19. Fino a 5 geni e 25 righe per pagina. I conteggi di pagina non sono la prevalenza della coorte. Nessuna interpretazione terapeutica.",
-    "ar": "مجموعة TCGA PanCancer العامة لسرطان الثدي، التجميع hg19. حتى 5 جينات و25 سجلًا في الصفحة. أعداد الصفحة ليست انتشارًا في المجموعة. لا يتضمن تفسيرًا علاجيًا.",
-    "zh": "TCGA PanCancer 乳腺癌公开队列，hg19。最多 5 个基因，每页 25 条记录。页面计数不是队列患病率。不提供治疗解释。",
-    "ja": "TCGA PanCancer の乳がん公開コホート、hg19。最大5遺伝子、1ページ25件。ページ内の件数はコホート有病率ではありません。治療上の解釈は含みません。",
-    "hi": "TCGA PanCancer का सार्वजनिक स्तन-कैंसर समूह, hg19। अधिकतम 5 जीन और प्रति पृष्ठ 25 रिकॉर्ड। पृष्ठ की गिनती समूह में प्रसार नहीं है। उपचार संबंधी व्याख्या शामिल नहीं है।"
+    "pt-BR": "Coorte TCGA PanCancer de câncer de mama, genoma hg19. Até 5 genes e 25 registros por página. Contagens da página não são prevalência da coorte. Não inclui interpretação terapêutica. A contagem por alteração proteica na coorte inteira é opcional, a pedido.",
+    "en": "TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. Page counts are not cohort prevalence. No therapeutic interpretation is included. Counts per protein change across the whole cohort are available on request.",
+    "es": "Cohorte TCGA PanCancer de cáncer de mama, hg19. Hasta 5 genes y 25 registros por página. Los recuentos de página no son prevalencia de la cohorte. No incluye interpretación terapéutica. El recuento por cambio proteico en toda la cohorte es opcional, a petición.",
+    "fr": "Cohorte TCGA PanCancer du cancer du sein, hg19. Jusqu’à 5 gènes et 25 lignes par page. Les nombres par page ne sont pas une prévalence de cohorte. Aucune interprétation thérapeutique. Le comptage par modification protéique sur l’ensemble de la cohorte est disponible sur demande.",
+    "de": "TCGA-PanCancer-Brustkrebskohorte, hg19. Bis zu 5 Gene und 25 Zeilen pro Seite. Seitenzahlen sind keine Kohortenprävalenz. Keine therapeutische Interpretation. Die Zählung je Proteinveränderung über die gesamte Kohorte ist auf Anfrage verfügbar.",
+    "it": "Coorte TCGA PanCancer del tumore mammario, hg19. Fino a 5 geni e 25 righe per pagina. I conteggi di pagina non sono la prevalenza della coorte. Nessuna interpretazione terapeutica. Il conteggio per variazione proteica sull’intera coorte è disponibile su richiesta.",
+    "ar": "مجموعة TCGA PanCancer العامة لسرطان الثدي، التجميع hg19. حتى 5 جينات و25 سجلًا في الصفحة. أعداد الصفحة ليست انتشارًا في المجموعة. لا يتضمن تفسيرًا علاجيًا. يتوفر عند الطلب تعداد لكل تغير بروتيني على المجموعة بأكملها.",
+    "zh": "TCGA PanCancer 乳腺癌公开队列，hg19。最多 5 个基因，每页 25 条记录。页面计数不是队列患病率。不提供治疗解释。 可按请求返回整个队列中每种蛋白质变化的计数。",
+    "ja": "TCGA PanCancer の乳がん公開コホート、hg19。最大5遺伝子、1ページ25件。ページ内の件数はコホート有病率ではありません。治療上の解釈は含みません。 コホート全体でのタンパク質の変化ごとの件数は、要求に応じて返されます。",
+    "hi": "TCGA PanCancer का सार्वजनिक स्तन-कैंसर समूह, hg19। अधिकतम 5 जीन और प्रति पृष्ठ 25 रिकॉर्ड। पृष्ठ की गिनती समूह में प्रसार नहीं है। उपचार संबंधी व्याख्या शामिल नहीं है। अनुरोध पर पूरे समूह में प्रत्येक प्रोटीन परिवर्तन की गिनती उपलब्ध है।"
   },
   "reviewAndRightsByLocale": {
     "pt-BR": {
@@ -500,7 +566,7 @@
   },
   "sourceSnapshot": {
     "websiteFreezeSha256": "b7ff37bd2e4c18b959c3431d9ff57d8ec654fbafacb0443eaea8be0c4a68b435",
-    "methodTransportSha256": "7579ddedf4c524c0dbc105f1cfb7b47ea5512b1653082c99ab4d139bb2f76ba1",
+    "methodTransportSha256": "cbee3556528a4beb7cbfae94afadc20d4e28c456976bbf8eb22e980085d6ca0d",
     "providerLockSha256": "5c06f5e524e2f5552a0c912eed497b912ab220b91b1a3b984e1eb8a3bc6836a0"
   }
 }

@@ -1,6 +1,6 @@
 # cBioPortal: public-cohort mutations
 
-TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. Page counts are not cohort prevalence. No therapeutic interpretation is included.
+TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. Page counts are not cohort prevalence. No therapeutic interpretation is included. Counts per protein change across the whole cohort are available on request.
 
 ## Scope and source identity
 
@@ -14,7 +14,9 @@ TCGA PanCancer breast cancer cohort, hg19. Up to 5 genes and 25 rows per page. P
   "sampleListId": "brca_tcga_pan_can_atlas_2018_sequenced",
   "pageSize": 25,
   "maxGenes": 5,
-  "maxPage": 100
+  "maxPage": 100,
+  "hotspotMaxRows": 10000,
+  "hotspotMinSamples": 2
 }
 
 Interface and contracts implemented on ELUCENIA. Analysis depends on the responsible service being available. Independent clinical review and professional language review are incomplete.

@@ -2,8 +2,8 @@
   "schema": "elucenia-research-offline-tests-v1",
   "id": "cbioportal",
   "implementationVersion": "ELUCENIA-research-api-2026-10-05-v3",
-  "tests": 58,
-  "passed": 58,
+  "tests": 59,
+  "passed": 59,
   "failed": 0,
   "scope": "Offline replays of captured official public/synthetic API responses, exact request/response/version/bounds/locale/timeout/shared-lock contracts. No network, browser, private portal/session or independent provider-model/clinical validation.",
   "rows": [
@@ -229,6 +229,10 @@
     },
     {
       "name": "compatible release accepted, changed data identity refused",
+      "pass": true
+    },
+    {
+      "name": "cohort hotspot counts opt in, span the cohort and refuse partial pages",
       "pass": true
     },
     {
